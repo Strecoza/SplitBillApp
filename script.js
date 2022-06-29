@@ -1,9 +1,9 @@
-gsap.from("#container", {y: -100, easy: "power4", duration: 2, scale: .5})
+
 gsap.from("h1", {opacity: 0, delay: .5, duration: 2})
 gsap.from(".form", {opacity: 0, delay: 1.1, duration: 1.5})
-gsap.from("#billSplit", {opacity: 0, delay: 1.2, duration: 1.5})
-gsap.from("#totalTip", {opacity: 0, delay: 1.4,duration: 1.5})
-gsap.from("#totalAmount", {opacity: 0, delay: 1.5, duration: 1.5})
+gsap.from("#billSplit", {opacity: 0, delay: 1.3, duration: 1.5})
+gsap.from("#totalTip", {opacity: 0, delay: 1.6,duration: 1.5})
+gsap.from("#totalAmount", {opacity: 0, delay: 1.9, duration: 1.5})
 
 
 const button = document.querySelector('#btn');
@@ -23,13 +23,14 @@ function calculateAmount(e){
     const people = document.querySelector('#people').value;
     const tip = document.querySelector('#tip').value;
 
-    if(payment ===""||people ===""||people < 1){
-        Swal.fire({
-            icon: 'error',
-            title: 'Error!',
-            text: 'Please enter information!'
-        })
+    if(payment ===""||people ===""||people < 1||payment== isNaN||people ==isNaN){
+        swal("Oops", "Please enter your information", "error");
     }
+    else if(isNaN(payment)|| isNaN(people)){
+        swal("Oops", "Please enter a number", "error");
+    }
+    
+
 
 let amountPerPerson = payment/people;
 let tipPerPerson = (payment*tip)/people;
