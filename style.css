@@ -1,0 +1,229 @@
+body{
+    background: url("https://images.unsplash.com/photo-1565933717318-77b4b61d6d63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+    background-color: rgba(20, 6, 54, 0.9);
+    margin: 0;
+    padding: 0;
+    
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+body::-webkit-scrollbar-track {
+-webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+background-color: #f9f9fd;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: #f2bf93;
+background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .25) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, .25) 50%,
+                    rgba(255, 255, 255, .25) 75%,
+                    transparent 75%,
+                    transparent);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    min-height: 320px;
+    max-width: 800px;
+    margin: 5% auto ;
+    border-radius: 40px;
+    padding: auto;
+    background-color: rgba(254,177,57, 0.75);
+    color: white;
+   
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    float:left;
+    width: 90%;
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1{
+    margin: 20px auto 5px auto;
+    padding: 0;
+    align-self: center;
+    font-size: 40px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: bold italic;
+    color: #143F6B;
+}
+
+/*Input Blocks*/
+.field{
+    width: 100%;
+    margin: 5px;
+    clear:both; 
+    text-align:right; 
+    line-height:25px;
+}
+
+label {
+    float:left; 
+    padding-right:10px;
+}
+
+input{
+    max-width: 650px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+#addTip{
+    max-width: 650px;
+    width: 51%;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #F6F54D;
+}
+
+#btn{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background-color: #F55353;
+}
+
+
+#tip{
+    display: none;
+    max-width: 650px;
+    width: 51%;
+    float:right;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.img{
+    width: 15px;
+    height: 15px;
+}
+
+/*Calculations result blocks*/
+
+#showTotal{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    margin: 7px auto;
+}
+
+p{
+    margin: 5px auto 0 auto; 
+}
+
+#billSplit, #totalTip, #totalAmount{
+    flex: 0 1 60%;
+    border: none;
+    border-radius: 10px;
+    margin: 15px auto;
+    padding: 15px auto;
+    min-height: 50px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgba(20,63,107, 0.95);
+}
+
+@media all and (max-width: 610px){
+    #container{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        padding: 10px auto;
+        background-color: rgba(254,177,57, 0.6);
+    }
+
+    #addTip{
+        width: 30%;
+    }
+
+    #tip{
+        width: 30%;
+        padding: 5px;
+    }
+}
+
+@media all and (max-width: 430px){
+    h1{
+        font-size: 20px;
+    }
+
+    input{
+        width: 40%;
+    }
+
+    #btn{
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    #billSplit, #totalTip, #totalAmount{
+        flex: 0 1 100%;
+        padding: 15px auto;
+        margin: 5px auto;
+    }
+}
+
+@media all and (max-width: 380px) {
+   input{
+        width: 30%;
+        font-size: 9px;
+    }
+  
+    .field {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-height: 820px){
+    label {
+        font-size: 14px;
+    }
+    #billSplit, #totalTip, #totalAmount{
+        height: 15%;
+       
+        margin-top: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+   }
+   #showTotal{
+        margin: 5px auto;
+   }
+   #btn{
+    font-size: 14px;
+    margin: 5px auto 0 auto;
+}
+ }
+
+ 
+
+

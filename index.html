@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Taxi payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id ="container">
+        <h1>Let's Split Taxi Payment!</h1>
+        <form class="form">
+            <div class ="field">
+                <label for="payment">Payment</label>
+                <img class ="img" src="https://img.icons8.com/material-rounded/72/taxi-mobile-payment.png">
+                <input type ="text" id ="payment" placeholder ="Enter your payment">
+            </div>
+            <div class ="field">
+                <label for ="people">Number of people</label>
+                <img class ='img' src ="https://img.icons8.com/glyph-neue/72/queue.png">
+                <input type="text" id ="people" placeholder ="How many people?"> 
+            </div>
+            <div class ="field">
+                <label for ="addTip">Did you like our service?</label>
+                <img class ="img" src ="https://img.icons8.com/material/2x/heart-border.png">
+                <button id="addTip">Add tip!</button>
+                <select id="tip">
+                    <option disabled>Select an option</option>
+                    <option value="0.30">Wow! 30% 🖤</option>
+                    <option value="0.20">Good service! 20% 💙</option>
+                    <option value="0.10">It was OK! 10% 🤍</option>
+                    <option value="0.00" selected>No tip! ✖️</option>
+                </select>
+            </div>
+            <button id="btn">Calculate</button>
+        </form>
+
+        <div id="showTotal">
+            <!-- Total payment -->
+            <div id="billSplit">
+                <p>Payment </p>
+                <span>$</span>
+                <span id="dividedBill"></span>
+                <span> per person</span>
+            </div>
+
+            <!--TipsByPerson -->
+            <div id="totalTip">
+                <p>Tip </p>
+                <span>$</span>
+                <span id="dividedTip"></span>
+                <span> per person</span>
+            </div>
+
+
+            <!--TotalAmountPerPerson -->
+            <div id="totalAmount">
+                <p>Total </p>
+                <span>$</span>
+                <span id="billAndTip"></span>
+                <span> per person</span>
+            </div>
+        </div>
+     </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>
